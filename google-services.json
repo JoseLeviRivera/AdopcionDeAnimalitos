@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "192326141018",
+    "project_id": "adopcionanimales-aef69",
+    "storage_bucket": "adopcionanimales-aef69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192326141018:android:0ee06bddce0f6b61aa8463",
+        "android_client_info": {
+          "package_name": "com.example.adopciondeanimales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192326141018-16vtg0r1m7vsonlm5iqutc3pfjuabpij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adopciondeanimales",
+            "certificate_hash": "7988b9a568df384e08d83b88a9cbf655a476db35"
+          }
+        },
+        {
+          "client_id": "192326141018-f6thkign1hr6luj5qbun7d8d6biaob73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8EcRlfip2Q-1CYw573JW5YLHuEISnNU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192326141018-f6thkign1hr6luj5qbun7d8d6biaob73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
