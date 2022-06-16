@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdopcionDeAnimales">
         <activity
+            android:name=".ContenidoListaAnimalesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListarAnimalesActivity"
+            android:exported="false" />
+        <activity
             android:name=".InsertaAnimalActivity"
             android:exported="false" />
 

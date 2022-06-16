@@ -17,11 +17,18 @@ public class MenuOpcionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         insertar = (TextView) findViewById(R.id.id_darAdopcion);
+        listaAnimales = (TextView) findViewById(R.id.id_lista);
 
         insertar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MenuOpcionActivity.this,InsertaAnimalActivity.class));
+            }
+        });
+        listaAnimales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuOpcionActivity.this,ContenidoListaAnimalesActivity.class));
             }
         });
     }
