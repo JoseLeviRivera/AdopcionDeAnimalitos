@@ -6,15 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".MenuOpcionActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="188dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="monospace"
+        android:text="AdoptaMe"
+        android:textAlignment="center"
+        android:textColor="@color/primary"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_lista"
+        android:layout_width="361dp"
+        android:layout_height="40dp"
+        android:text="¿Deseas ver la lista de animalitos?"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276" />
+        app:layout_constraintVertical_bias="0.173" />
+
+    <TextView
+        android:id="@+id/id_darAdopcion"
+        android:layout_width="365dp"
+        android:layout_height="42dp"
+        android:text="Dar en adopcion un animalito"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

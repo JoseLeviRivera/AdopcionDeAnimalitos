@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdopcionDeAnimales">
         <activity
+            android:name=".InsertaAnimalActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".Services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
             android:name=".MenuOpcionActivity"
             android:exported="false" />
         <activity
@@ -17,12 +29,6 @@
             android:exported="false" />
         <activity
             android:name=".RegistrarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.xxxxxxxxxxxxx"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.RegistrarActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
