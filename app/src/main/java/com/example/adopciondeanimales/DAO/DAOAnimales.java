@@ -41,7 +41,7 @@ public class DAOAnimales {
         return databaseReference.orderByKey();
     }
 
-    /*
+/*
     public ArrayList<Animal>  cargarDatos() {
         ArrayList<Animal> lista = new ArrayList<>();
         databaseReference.child("Animal")
@@ -60,8 +60,7 @@ public class DAOAnimales {
         });
         return lista;
     }
-     */
-
+*/
     public String getItem(){
         return databaseReference.getKey();
     }

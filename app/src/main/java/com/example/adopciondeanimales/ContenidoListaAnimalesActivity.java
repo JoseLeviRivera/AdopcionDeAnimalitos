@@ -18,6 +18,7 @@ public class ContenidoListaAnimalesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contenido_lista_animales);
         texto = (TextView) findViewById(R.id.id_contenidoBD);
         botonCargar = (Button) findViewById(R.id.btnCargarBD);
+        /*
         botonCargar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,5 +31,7 @@ public class ContenidoListaAnimalesActivity extends AppCompatActivity {
                 texto.setText(a);
             }
         });
+
+         */
     }
 }
