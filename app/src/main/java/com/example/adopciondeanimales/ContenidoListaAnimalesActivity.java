@@ -6,11 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.example.adopciondeanimales.DAO.DAOAnimales;
 import com.example.adopciondeanimales.Models.Animal;
-
-import java.util.ArrayList;
 
 public class ContenidoListaAnimalesActivity extends AppCompatActivity {
     private TextView texto;
@@ -26,7 +23,7 @@ public class ContenidoListaAnimalesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DAOAnimales dao = new DAOAnimales();
                 String a = "";
-                for (Animal animals : dao.query()){
+                for (Animal animals : dao.cargarDatos()){
                    String datos =  animals.getNombre() + " " + animals.getTipo() +" "+ animals.getRaza() +" " + animals.getSexo() + " " + animals.getDescripcion() +"\n";
                    a = a + datos;
                 }

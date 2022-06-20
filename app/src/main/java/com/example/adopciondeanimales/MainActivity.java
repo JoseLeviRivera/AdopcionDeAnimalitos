@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                  public void onComplete(@NonNull Task<AuthResult> task) {
                      if (task.isSuccessful()){
                          Toast.makeText(MainActivity.this,"Logeo con exito!",Toast.LENGTH_SHORT).show();
-                         startActivity(new Intent(MainActivity.this,MenuOpcionActivity.class));
+                         startActivity(new Intent(MainActivity.this,MapsMapsActivity.class));
                      }else{
                          String e = task.getException().toString();
                          Toast.makeText(MainActivity.this, e,Toast.LENGTH_LONG).show();

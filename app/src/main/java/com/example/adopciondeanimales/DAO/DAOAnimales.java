@@ -1,6 +1,7 @@
 package com.example.adopciondeanimales.DAO;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -36,10 +37,30 @@ public class DAOAnimales {
         return databaseReference.child(key).removeValue();
     }
 
-
     public Query get(){
         return databaseReference.orderByKey();
     }
+
+    /*
+    public ArrayList<Animal>  cargarDatos() {
+        ArrayList<Animal> lista = new ArrayList<>();
+        databaseReference.child("Animal")
+                .child(getRef(position).getKey)
+                .updateChildren(map)
+                addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot datos: snapshot.getChildren()) {
+                    Animal e = datos.getValue(Animal.class);
+                    lista.add(e);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+        return lista;
+    }
+     */
 
     public String getItem(){
         return databaseReference.getKey();
@@ -47,11 +68,14 @@ public class DAOAnimales {
 
     public ArrayList<Animal> query(){
         ArrayList<Animal> ListaDeanimales = new ArrayList<>();
-        databaseReference.child("Animal").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Animal").child("uid").orderByKey().addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     for (DataSnapshot s : snapshot.getChildren()) {
+                        String n = s.getKey().toString();
+                        Log.d("E", n);
+
                         String nombre = s.child("nombre").getValue().toString();
                         String tipo = s.child("tipo").getValue().toString();
                         String raza = s.child("raza").getValue().toString();

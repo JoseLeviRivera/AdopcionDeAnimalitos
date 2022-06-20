@@ -14,4 +14,5 @@
         <item>Perro</item>
         <item>Gato</item>
     </string-array>
+    <string name="title_activity_maps_maps">MapsMapsActivity</string>
 </resources>
