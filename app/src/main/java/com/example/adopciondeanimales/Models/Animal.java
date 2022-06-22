@@ -1,7 +1,6 @@
 package com.example.adopciondeanimales.Models;
 
 public class Animal {
-    private int tokenAnimal;
     private String nombre;
     private String tipo;
     private String raza;
@@ -10,8 +9,7 @@ public class Animal {
 
     public Animal(){}
 
-    public Animal(int tokenAnimal, String nombre, String tipo, String raza, String sexo, String descripcion) {
-        this.tokenAnimal = tokenAnimal;
+    public Animal(String nombre, String tipo, String raza, String sexo, String descripcion) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.raza = raza;
@@ -19,13 +17,6 @@ public class Animal {
         this.descripcion = descripcion;
     }
 
-    public int getTokenAnimal() {
-        return tokenAnimal;
-    }
-
-    public void setTokenAnimal(int tokenAnimal) {
-        this.tokenAnimal = tokenAnimal;
-    }
 
     public String getNombre() {
         return nombre;

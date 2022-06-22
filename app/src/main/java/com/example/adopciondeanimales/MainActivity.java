@@ -47,19 +47,13 @@ public class MainActivity extends AppCompatActivity {
         //Instancia de firebases
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
-
         registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RegistrarActivity.class));
-            }
+            public void onClick(View view) { startActivity(new Intent(MainActivity.this, RegistrarActivity.class)); }
         });
-
         olvideMicontra.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,RecuperarContraActivity.class));
-            }
+            public void onClick(View view) { startActivity(new Intent(MainActivity.this,RecuperarContraActivity.class)); }
         });
     }
 
@@ -73,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                  public void onComplete(@NonNull Task<AuthResult> task) {
                      if (task.isSuccessful()){
                          Toast.makeText(MainActivity.this,"Logeo con exito!",Toast.LENGTH_SHORT).show();
-                         startActivity(new Intent(MainActivity.this,MapsMapsActivity.class));
+                         //startActivity(new Intent(MainActivity.this,MapsMapsActivity.class));
+                         startActivity(new Intent(MainActivity.this,MenuOpcionActivity.class));
                      }else{
                          String e = task.getException().toString();
                          Toast.makeText(MainActivity.this, e,Toast.LENGTH_LONG).show();

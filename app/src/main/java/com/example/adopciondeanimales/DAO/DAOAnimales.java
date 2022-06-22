@@ -81,7 +81,7 @@ public class DAOAnimales {
                         String sexo = s.child("sexo").getValue().toString();
                         String descripcion = s.child("descripcion").getValue().toString();
                         int tokenAnimal = Integer.parseInt(s.child("tokenAnimal").getValue().toString());
-                        Animal animal = new Animal(tokenAnimal, nombre, tipo, raza, sexo, descripcion);
+                        Animal animal = new Animal(nombre, tipo, raza, sexo, descripcion);
                         ListaDeanimales.add(animal);
                     }
                 } else {
