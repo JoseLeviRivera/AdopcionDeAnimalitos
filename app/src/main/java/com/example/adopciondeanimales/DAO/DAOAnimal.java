@@ -59,6 +59,22 @@ public class DAOAnimal {
         });
         return lista;
     }
+
+    public void listQuerys(){
+        db.collection("Animales").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Log.d("TAG", document.getId().toString() + " => " + document.getData());
+                    }
+                } else {
+                    Log.w("TAG", "Error getting documents.", task.getException());
+                }
+            }
+        });
+    }
+
     public void queryToDataBase(){
         List<String> lista = new ArrayList();
         db.collection("Animales").addSnapshotListener(new EventListener<QuerySnapshot>() {
